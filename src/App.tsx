@@ -1,32 +1,22 @@
-import { useState } from "react";
-import { Input } from "./components/Input";
+import CustomLinksSection from "./components/ProfileEditor/CustomLinksSection";
+import ProfileSection from "./components/ProfileEditor/ProfileSection";
+import SocialSection from "./components/ProfileEditor/SocialSection";
+import PhonePreview from "./components/ProfilePreview/PhonePreview";
 
 function App() {
-  const [name, setName] = useState("");
-  const [photo, setPhoto] = useState("");
-
   return (
-    <div>
-      <Input
-        name="Name"
-        id="name"
-        type="text"
-        value={name}
-        onChange={(event) => setName(event.target.value)}
-      />
-      <Input
-        name="Photo"
-        id="photo"
-        type="url"
-        value={photo}
-        onChange={(event) => setPhoto(event.target.value)}
-      />
-
-      <div>
-        <img src={photo} alt="Foto de perfil" />
-        <p>{name}</p>
+    <main className="min-h-screen bg-slate-100 text-slate-900">
+      <div className="mx-auto flex max-w-400 flex-col gap-8 px-6 py-10 lg:flex-row">
+        <div className="flex-1 space-y-6">
+          <ProfileSection />
+          <SocialSection />
+          <CustomLinksSection />
+        </div>
+        <aside className="w-full lg:w-170">
+          <PhonePreview />
+        </aside>
       </div>
-    </div>
+    </main>
   );
 }
 
