@@ -3,9 +3,16 @@ interface CheckboxProps {
   checked: boolean;
   name: string;
   description: string;
+  onChange?: (checked: boolean) => void;
 }
 
-export const Checkbox = ({ id, checked, name, description }: CheckboxProps) => {
+export const Checkbox = ({
+  id,
+  checked,
+  name,
+  description,
+  onChange,
+}: CheckboxProps) => {
   return (
     <label
       className="flex cursor-pointer items-center justify-between rounded-2xl border bg-slate-50 px-4 py-3"
@@ -19,6 +26,7 @@ export const Checkbox = ({ id, checked, name, description }: CheckboxProps) => {
         id={id}
         type="checkbox"
         checked={checked}
+        onChange={(e) => onChange?.(e.target.checked)}
         className="h-4 w-4 accent-emerald-600"
       />
     </label>
