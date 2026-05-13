@@ -12,6 +12,6 @@ describe("Testes de conexão com o github", () => {
         expect(userData).toHaveProperty("followers");
         expect(userData).toHaveProperty("public_repos");
 
-        expect(userData.login).toBe(username;)
+        expect(userData.login).toBe(username)
     })
 })
