@@ -1,0 +1,33 @@
+Link das anotações do professor - https://sl1ink.com/ZVeil
+
+		Dowloads:
+jsdom
+vitest
+npm install -D @testing-library/react
+npm install -D @testing-library/jest-dom
+npm install -D @testing-library/user-event
+
+vite = bundler 
+	- monta um serv local
+	- prepara as builds
+	- otimiza as builds
+	- orquestra as ferramentas de dev (ex: tailwind)
+
+vitest = testing engine - exclusivo do vite-utilizado em react
+	  - roda testes
+	  - gera relatorio de testes
+	  - orquestra as ferramentas de testes
+
+@testing-library/test - funções para renderizar react
+	 - simula o que é o react no DOM - para rodar o html
+	 - habilita renderização do react no DOM simulado
+
+@testing-library/jest-DOM - matchers
+	- adiciona os "expects" como toBeInTheDocument() - verificação - "eu espero que..."
+	- verificação para ver se esta funcionando do jeito que a gente espera
+
+@testing-library/user-event - eventos do navegador(user)
+	- adiciona os eventos do usuário(clique, hover, escrever)
+
+@jsdom -  simulador do DOM no ambiente node
+	- simula um navegador com um DOM básico
